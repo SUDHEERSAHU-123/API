@@ -29,6 +29,41 @@
         .section {
             margin: 50px 0;
         }
+
+        .api-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .api-item {
+            background: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .api-heading {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .api-description {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .api-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+        }
     </style>
 </head>
 <body>
@@ -120,7 +155,7 @@
         <section id="how-apis-work" class="section">
             <h2><i class="fas fa-sync-alt"></i> How APIs Work</h2>
             <div class="image-placeholder">
-                <img src="images/how_apis_work_image.jpg" alt="How APIs Work" style="width: 50%; height: auto;">
+                <img src="uzlv91cc.png" alt="How APIs Work" style="width: 50%; height: auto;">
             </div>
             <h3><i class="fas fa-utensils"></i> Analogy (Kitchen Analogy)</h3>
             <p>In the kitchen analogy, the API acts as a waiter. The customer requests something (like data), and the waiter (API) takes that request to the kitchen (server), gets the result, and brings it back to the customer (app).</p>
@@ -131,44 +166,95 @@
         <!-- Types of APIs Section -->
         <section id="types-of-apis" class="section">
             <h2><i class="fas fa-cogs"></i> Types of APIs</h2>
-            <div class="image-placeholder">
-                <img src="images/types_of_apis_image.jpg" alt="Types of APIs" style="width: 50%; height: auto;">
+            <div class="api-container">
+                <div class="api-item" id="public-api">
+                    <h3 class="api-heading">Public APIs</h3>
+                    <div class="api-content">
+                        <img src="public-api.png" alt="Public API" class="api-image">
+                        <p class="api-description">Public APIs are open for everyone to use.</p>
+                    </div>
+                </div>
+                <div class="api-item" id="private-api">
+                    <h3 class="api-heading">Private APIs</h3>
+                    <div class="api-content">
+                        <img src="private-api.png" alt="Private API" class="api-image">
+                        <p class="api-description">Private APIs are restricted access within an organization.</p>
+                    </div>
+                </div>
+                <div class="api-item" id="partner-api">
+                    <h3 class="api-heading">Partner APIs</h3>
+                    <div class="api-content">
+                        <img src="partner-api.png" alt="Partner API" class="api-image">
+                        <p class="api-description">Partner APIs are shared with specific partners for collaboration.</p>
+                    </div>
+                </div>
             </div>
-            <ul>
-                <li><strong>Public APIs:</strong> Open for everyone to use.</li>
-                <li><strong>Private APIs:</strong> Restricted access within an organization.</li>
-                <li><strong>Partner APIs:</strong> Shared with specific partners for collaboration.</li>
-            </ul>
         </section>
 
         <!-- REST API Overview Section -->
-        <section id="rest-api-overview" class="section">
-            <h2><i class="fas fa-cloud"></i> REST API Overview</h2>
-            <div class="image-placeholder">
-                <img src="images/rest_api_overview_image.jpg" alt="REST API Overview" style="width: 50%; height: auto;">
-            </div>
-            <p>REST APIs use standard HTTP methods: GET, POST, PUT, and DELETE to interact with resources.</p>
-            <ul>
-                <li>GET: Retrieve data</li>
-                <li>POST: Create new data</li>
-                <li>PUT: Update existing data</li>
-                <li>DELETE: Remove data</li>
-            </ul>
+<section id="rest-api-overview" class="section">
+    <h2><i class="fas fa-cloud"></i> REST API Overview</h2>
+    <div class="image-placeholder">
+        <img src="REST-API-Overview.jpg" alt="REST API Overview" style="width: 50%; height: auto;" onclick="toggleDescription()">
+    </div>
+
+    <!-- Hidden container that displays the description -->
+    <div id="rest-description" class="description-container" style="display:none; padding: 20px; border-radius: 8px; margin-top: 20px; background-color: #f0f8ff; border: 2px solid #00bfff; box-shadow: 0 4px 10px rgba(0, 191, 255, 0.2);">
+        <p style="color: #333333; font-size: 16px; line-height: 1.6;"><strong>REST stands for Representational State Transfer.</strong> It’s an architectural style used for designing networked applications. In RESTful systems, data is transferred between a client and a server using standard HTTP methods such as GET, POST, PUT, DELETE, etc. REST APIs are stateless and work with resources identified by URLs.</p>
+    </div>
+</section>
+
         </section>
 
         <!-- API Security Section -->
-        <section id="api-security" class="section">
-            <h2><i class="fas fa-shield-alt"></i> API Security</h2>
-            <div class="image-placeholder">
-                <img src="images/api_security_image.jpg" alt="API Security" style="width: 50%; height: auto;">
-            </div>
-            <p>Security in APIs is important to protect sensitive data and ensure only authorized users can access resources.</p>
-        </section>
+<section id="api-security" class="section">
+    <h2><i class="fas fa-shield-alt"></i> API Security</h2>
+
+    <!-- Client-Server Communication Images -->
+    <div class="image-section">
+        <div class="img-col">
+            <h3>Client-Server Communication</h3>
+            <img src="Client-Server.jpg" width="100%" height="100%">
+        </div>
+
+        <!-- API Key Authentication -->
+        <div class="img-col">
+            <h3>API Key Authentication</h3>
+            <img src="api-key.jpg" width="100%" height="100%">
+        </div>
+    </div>
+
+    <!-- Authentication & Data Flow -->
+    <div class="image-section">
+        <div class="img-col">
+            <h3>Authentication</h3>
+            <img src="Auth.jpg" width="100%" height="100%">
+        </div>
+
+        <div class="img-col">
+            <h3>Data Flow in APIs</h3>
+            <img src="Data-Flow.jpg" width="100%" height="100%">
+        </div>
+    </div>
+
+    <p>Security in APIs is important to protect sensitive data and ensure only authorized users can access resources.</p>
+</section>
+
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 API Event | <a href="#">Privacy Policy</a></p>
+        <p>© 2025 API Event | <a href="https://www.instagram.com/mdc_gitam?igsh=MTM2b3A0bDhzamVq">MDC Visakhapatnam</a></p>
     </footer>
+
+    <script>
+        document.querySelectorAll('.api-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
+</html>
+
 </html>

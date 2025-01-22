@@ -284,3 +284,97 @@ i.fas.fa-arrow-right, i.fas.fa-arrow-left {
     line-height: 1.6;
     margin-bottom: 0;
 }
+.image-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+.image-section .img-col{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.image-section .img-col img{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgb(212, 212, 205);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+    margin: 15px 20px;
+    transition: 0.2s ease;
+    position: relative;
+    border-radius: 5px;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.image-section .img-col img:hover{
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+/* General Section Styling */
+#types-of-apis {
+    text-align: center;
+    margin: 30px auto;
+}
+
+/* Container for API Types */
+.api-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Individual API Item Styling */
+.api-item {
+    width: 280px;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Hover Effect */
+.api-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* API Heading Styling */
+.api-heading {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* API Image Styling */
+.api-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Initially Hide API Content */
+.api-content {
+    display: none;
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Show content when heading is clicked */
+.api-item.active .api-content {
+    display: block;
+}

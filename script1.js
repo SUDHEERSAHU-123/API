@@ -70,5 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     showSection('home');
-});
-s
+});function toggleDescription() {
+    var description = document.getElementById("rest-description");
+    if (description.style.display === "none") {
+        description.style.display = "block";
+    } else {
+        description.style.display = "none";
+    }
+}
+
